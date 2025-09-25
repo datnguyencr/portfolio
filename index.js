@@ -1,5 +1,51 @@
 
-// JSON data (your apps)
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 100; // how early it triggers
+
+    if (elementTop < windowHeight - revealPoint) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active'); // remove if you want repeat on scroll back
+    }
+  }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+document.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  const hero = document.getElementById("hero");
+  const img = hero.querySelector(".profile-img");
+
+  let heroHeight = hero.offsetHeight;
+  let progress = Math.min(scrollY / heroHeight, 1);
+  let scale = 1 - progress * 0.4;
+  img.style.transform = `scale(${scale})`;
+
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  sections.forEach((sec) => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top <= 150 && rect.bottom >= 150) {
+      let id = sec.getAttribute("id");
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${id}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+});
+
+
 const apps = [
 {
 			"id": "com.ssteam.yugioh_card_builder",

@@ -18,6 +18,18 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+/* Hidden by default */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* When visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 h1,
 h2,
@@ -51,12 +63,27 @@ nav ul {
 nav a {
   color: #fff;
   font-size: 1.5rem;
+  position: relative;
   transition: color 0.3s;
+  padding-bottom: 5px;
 }
 
-nav a:hover {
-  color: #ffd700;
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background: #5c3eaf;
+  transition: width 0.3s ease;
 }
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
 
 /* Hero */
 #hero {
@@ -69,15 +96,18 @@ nav a:hover {
 }
 
 #hero .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   border: 4px solid #fff;
   margin-bottom: 1rem;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
 }
 
+
 #hero h1 span {
-  color: #6647bb;
+  color: #5c3eaf;
 }
 
 .section-header {
@@ -88,18 +118,22 @@ nav a:hover {
   display: inline-block;
   padding: 0.7rem 1.5rem;
   margin-top: 1rem;
-  background: #6647bb;
+  background: #5c3eaf;
   color: #fff;
   border-radius: 5px;
+}
+.btn:hover {
+  background: #321979;
 }
 .center-text {
   text-align: center;
 }
-/* Sections */
+
 section {
   padding: 2rem 2rem;
   max-width: 1100px;
   margin: auto;
+  scroll-margin-top: 80px; 
 }
 
 /* Skills */
@@ -124,19 +158,21 @@ section {
 }
 
 .project-card {
-  background: #fff;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  border: solid 1px #cccccc;
+  border: solid 1px #888;
 }
-
+.project-card:hover {
+  background: #2d2d2e;
+}
 .project-card img {
   max-width: 80px;
 }
 
 .project-card span {
   font-size: 1rem;
+  color:#fff;
   margin: 0;
 }
 
@@ -150,7 +186,10 @@ section {
 /* Contact */
 #contact {
   text-align: center;
+  min-height: 80vh; /* ensures it almost fills the screen */
+  padding-bottom: 4rem;
 }
+
 
 footer {
   text-align: center;
