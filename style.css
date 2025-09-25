@@ -37,6 +37,23 @@ h3 {
   margin: 0 0 1rem;
   font-weight: bold;
 }
+.download-btn {
+  background: #2a5298;
+  margin-bottom: 1rem;
+}
+.download-btn:hover {
+  background: #1a3570;
+}
+.btn-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.btn-row .btn {
+  flex: none;
+}
 
 a {
   text-decoration: none;
@@ -69,7 +86,7 @@ nav a {
 }
 
 nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 5px;
@@ -83,7 +100,6 @@ nav a:hover::after,
 nav a.active::after {
   width: 100%;
 }
-
 
 /* Hero */
 #hero {
@@ -105,7 +121,6 @@ nav a.active::after {
   will-change: transform;
 }
 
-
 #hero h1 span {
   color: #5c3eaf;
 }
@@ -115,13 +130,26 @@ nav a.active::after {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.7rem 1.5rem;
   margin-top: 1rem;
+  height: 20px;
   background: #5c3eaf;
   color: #fff;
   border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  gap: 0.5rem;
 }
+
+.btn i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .btn:hover {
   background: #321979;
 }
@@ -133,7 +161,7 @@ section {
   padding: 2rem 2rem;
   max-width: 1100px;
   margin: auto;
-  scroll-margin-top: 80px; 
+  scroll-margin-top: 80px;
 }
 
 /* Skills */
@@ -172,7 +200,7 @@ section {
 
 .project-card span {
   font-size: 1rem;
-  color:#fff;
+  color: #fff;
   margin: 0;
 }
 
@@ -186,10 +214,9 @@ section {
 /* Contact */
 #contact {
   text-align: center;
-  min-height: 80vh; /* ensures it almost fills the screen */
+  min-height: 80vh;
   padding-bottom: 4rem;
 }
-
 
 footer {
   text-align: center;
