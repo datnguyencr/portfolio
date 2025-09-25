@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dat Nguyen - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -14,7 +14,7 @@
     <!-- Navigation -->
     <header>
       <nav>
-        <ul class="bebas-neue-regular">
+        <ul class="bebas-neue-regular shadow">
           <li>
             <a href="#hero">Home</a>
           </li>
@@ -33,23 +33,27 @@
     <!-- Hero Section -->
     <section id="hero">
       <div class="hero-content">
-        <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
-        <h1 class="bebas-neue-regular">Hello, &nbsp;I'm <span>Dat Nguyen</span>
+        <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img">
+        <h1 class="bebas-neue-regular">Hello, &nbsp;I'm <span class="dev-name">Dat Nguyen</span>
         </h1>
-        <p>Mobile Developer &nbsp;|&nbsp; App Creator &nbsp;|&nbsp; Passionate Fish Keeper</p>
+        <div>Mobile Developer &nbsp;|&nbsp; App Creator &nbsp;|&nbsp; <div class="string">
+            <h1 class="role app">Fish Keeper</h1>
+            <h1 class="role web">Web Creator</h1>
+            <h1 class="role web">Open-Source Builder</h1>
+          </div>
+        </div>
         <p>
-          <br>
-          I am a Mobile Software Developer with over 12 years of experience, skilled in both independent and team-based projects. With a strong background as a full-stack developer, I bring broad technical expertise across web and mobile platforms. <br> I adapt quickly to new technologies, write clean, reusable components and libraries, and excel at delivering efficient, scalable solutions.
+          <br> I am a Mobile Software Developer with over 12 years of experience, skilled in both independent and team-based projects. With a strong background as a full-stack developer, I bring broad technical expertise across web and mobile platforms. <br> I adapt quickly to new technologies, write clean, reusable components and libraries, and excel at delivering efficient, scalable solutions.
         </p>
         <div class="btn-row">
           <a href="#projects" class="btn">See My Work</a>
-          <a href="/CV_Android_Nguyen_Van_Dat.pdf" download target="_blank" class="btn download-btn">
+          <a href="assets/files/CV_Android_Nguyen_Van_Dat.pdf" download target="_blank" class="btn download-btn">
             <i class="fas fa-download"></i>&nbsp; Download My CV </a>
         </div>
       </div>
     </section>
     <!-- Skills Section -->
-    <section id="skills" class="reveal">
+    <section id="skills" class="reveal shadow">
       <h2 class="center-text bebas-neue-regular section-header">Skills</h2>
       <div class="skill-list">
         <span>Kotlin</span>
@@ -74,12 +78,12 @@
     </section>
     <!-- Projects Section -->
     <section id="projects" class="reveal">
-      <h2 class="center-text bebas-neue-regular section-header">Mini Projects</h2>
+      <h2 class="center-text bebas-neue-regular section-header shadow">Mini Projects</h2>
       <div id="app-list" class="projects-grid"></div>
     </section>
     <!-- Contact Section -->
     <section id="contact" class="reveal">
-      <h2 class="center-text bebas-neue-regular section-header">Contact Me</h2>
+      <h2 class="center-text bebas-neue-regular section-header shadow">Contact Me</h2>
       <p> I enjoy creating mobile apps for the Play Store, building Android libraries, and developing web tools. <br> I’m also a passionate fish keeper. <br>
         <br> If you’d like to work with me, feel free to reach out !
       </p>
@@ -92,8 +96,8 @@
       </p>
     </section>
     <footer>
-      <p>© 2025 Dat Nguyen. Built with passion</p>
+      <p>© 2024 Developed by Dat Nguyen. Built with passion.</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

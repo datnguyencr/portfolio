@@ -3,11 +3,45 @@ body {
   margin: 0;
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  background: #111111;
+  background: linear-gradient(15deg, hsl(230, 38%, 6%), hsl(232, 23%, 18%));
   color: #fff;
   scroll-behavior: smooth;
   font-size: 1.1rem;
 }
+@keyframes move {
+  25% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.string {
+  display: inline-flex;
+  flex-direction: column;
+  height: 2.5vmin;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.role {
+  font-size: 2vmin;
+  line-height: 2.5vmin;
+  margin: 0;
+  animation: move 4s infinite;
+}
+.shadow {
+  text-shadow: 0 0 0.5rem #ccc;
+}
+
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -121,7 +155,7 @@ nav a.active::after {
   will-change: transform;
 }
 
-#hero h1 span {
+#hero .dev-name {
   color: #5c3eaf;
 }
 
