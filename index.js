@@ -125,7 +125,7 @@ apps.forEach(app => {
   appCard.innerHTML = `
     <a href="https://play.google.com/store/apps/details?id=${app.id}" target="_blank">
       <img src="${app.icon}" alt="${app.name}">
-      <div><span>${app.name}</span></div>
+      <div><span class"bebas-neue-regular">${app.name}</span></div>
     </a>
   `;
 

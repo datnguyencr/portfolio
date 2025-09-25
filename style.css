@@ -1,14 +1,27 @@
 /* General */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
   background: #111111;
   color: #fff;
   scroll-behavior: smooth;
+  font-size: 1.2rem;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 0 1rem;
   font-weight: bold;
 }
@@ -22,10 +35,9 @@ header {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  background: #111111; 
+  background: #111111;
   z-index: 1000;
 }
-
 
 nav ul {
   list-style: none;
@@ -38,7 +50,7 @@ nav ul {
 
 nav a {
   color: #fff;
-  font-weight: bold;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 
@@ -68,6 +80,10 @@ nav a:hover {
   color: #6647bb;
 }
 
+.section-header {
+  font-size: 2rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.7rem 1.5rem;
@@ -75,9 +91,10 @@ nav a:hover {
   background: #6647bb;
   color: #fff;
   border-radius: 5px;
-  font-weight: bold;
 }
-
+.center-text {
+  text-align: center;
+}
 /* Sections */
 section {
   padding: 2rem 2rem;
@@ -95,7 +112,7 @@ section {
 #skills span {
   background: #2a5298;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 20px;
 }
 
@@ -108,10 +125,10 @@ section {
 
 .project-card {
   background: #fff;
-  padding: 10px; 
+  padding: 10px;
   border-radius: 5px;
   text-align: center;
-  border:solid 1px #cccccc;
+  border: solid 1px #cccccc;
 }
 
 .project-card img {
@@ -119,7 +136,7 @@ section {
 }
 
 .project-card span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -129,7 +146,6 @@ section {
   font-weight: 600;
   font-size: 0.85rem;
 }
-
 
 /* Contact */
 #contact {
