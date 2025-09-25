@@ -6,15 +6,15 @@ body {
   background: #111111;
   color: #fff;
   scroll-behavior: smooth;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.lato-regular {
-  font-family: "Lato", sans-serif;
+.anonymous-pro {
+  font-family: "Anonymous Pro", monospace;
   font-weight: 400;
   font-style: normal;
 }
