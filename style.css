@@ -1,0 +1,144 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #111111;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Navigation */
+header {
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: #111111; 
+  z-index: 1000;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Hero */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+#hero .profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+}
+
+#hero h1 span {
+  color: #6647bb;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  background: #6647bb;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 2rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Skills */
+#skills .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#skills span {
+  background: #2a5298;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 10px; 
+  border-radius: 5px;
+  text-align: center;
+  border:solid 1px #cccccc;
+}
+
+.project-card img {
+  max-width: 80px;
+}
+
+.project-card span {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.project-card a {
+  display: inline-block;
+  color: #2a5298;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+
+/* Contact */
+#contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #ccc;
+}
