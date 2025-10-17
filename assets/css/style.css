@@ -75,8 +75,8 @@ nav a:hover::after,nav a.active::after {width:100%;}
 section {padding:2rem;max-width:1100px;margin:auto;scroll-margin-top:80px;}
 
 /* Skills */
-#skills .skill-list {display:flex;flex-wrap:wrap;gap:10px;}
-#skills span {background:#2a5298;color:#fff;padding:.3rem .8rem;border-radius:20px;}
+#skills .skill-list {display:flex;flex-wrap:wrap;gap:10px;margin-top: 10px;}
+#skills span {background:#007bff;color:#fff;padding:.3rem .8rem;border-radius:20px;}
 
 /* Projects */
 .projects-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;}
@@ -87,8 +87,29 @@ section {padding:2rem;max-width:1100px;margin:auto;scroll-margin-top:80px;}
 .project-card:hover {background:#2d2d2e;}
 .project-card img {max-width:80px;}
 .project-card span {font-size:1rem;}
-.project-card a {color:#2a5298;font-weight:600;font-size:.85rem;}
+.project-card a {color:#007bff;font-weight:600;font-size:.85rem;}
 
 /* Contact + Footer */
 #contact {text-align:center;min-height:80vh;padding-bottom:4rem;}
 footer {text-align:center;padding:1rem;background:#222;color:#ccc;}
+
+/* Web List */
+#web-list {
+  max-width: 600px;
+  text-align: left;
+}
+
+#web-list ul { list-style-type: disc; 
+  padding: 0;
+}
+
+#web-list li {
+  margin: 10px 0;
+}
+
+#web-list a {
+  display: inline-block;
+  color: #007bff;  
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
