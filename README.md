@@ -6,6 +6,6 @@ This site showcases my skills, projects, and contact information.
 
 ## 🚀 Site
 
-[View the live site](https://portfolio-9d0b41.gitlab.io/)
+[View the live site](https://datnguyencr.gitlab.io/portfolio)
 
 ---
