@@ -161,19 +161,79 @@ const apps = [
 			"icon": "https://play-lh.googleusercontent.com/XwFoaOx9FWPas40y_8evlmaUNgZDb0srg95Iu-Wp9mx5_8OV9Akr1KupXh-qcVyiYCRu=s256-rw"
 		}
 ];
-const appList = document.getElementById("app-list");
+const appListDiv = document.getElementById("app-list");
 
 // Render apps
-apps.forEach(app => {
-  const appCard = document.createElement("div");
-  appCard.className = "project-card";
+apps.forEach(item => {
+  const itemCard = document.createElement("div");
+  itemCard.className = "project-card";
 
-  appCard.innerHTML = `
-    <a href="https://play.google.com/store/apps/details?id=${app.id}" target="_blank">
-      <img src="${app.icon}" alt="${app.name}">
-      <div><span class"bebas-neue-regular">${app.name}</span></div>
+  itemCard.innerHTML = `
+    <a href="https://play.google.com/store/apps/details?id=${item.id}" target="_blank">
+      <div><img src="${item.icon}" alt="${item.name}"></div>
+      <div><span class="bebas-neue-regular">${item.name}</span></div>
     </a>
   `;
 
-  appList.appendChild(appCard);
+  appListDiv.appendChild(itemCard);
+});
+
+const webs = [
+		{
+			"url": "https://datnguyencr.gitlab.io/rain-simulator-web/",
+			"name": "Rain Simulator",
+			"icon": ""
+		},
+		{
+			"url": "https://datnguyencr.gitlab.io/planet-explorer-web/",
+			"name": "Planet Explorer",
+			"icon": ""
+		}	
+		,{
+			"url": "https://datnguyencr.gitlab.io/sudoku-web/",
+			"name": "Sudoku",
+			"icon": ""
+		}	,{
+			"url": "https://datnguyencr.gitlab.io/sliding-puzzle-web/",
+			"name": "Sliding Puzzle",
+			"icon": ""
+		}
+];
+const webListDiv = document.getElementById("webs-list");
+// Render chrome extensions
+webs.forEach(item => {
+  const itemCard = document.createElement("div");
+  itemCard.innerHTML = `
+    <a href="${item.url}" target="_blank">
+    <div class="thumbnail">
+      <img src="${item.icon}" />
+    </div>
+    <div class="title">${item.name}</div>
+    </a>
+  `;
+  webListDiv.appendChild(itemCard);
+});
+
+
+const chromeExtensions = [
+		{
+			"url": "https://chromewebstore.google.com/detail/file-downloader/hahkepphjffjcghlgfbeedkpmcncllag",
+			"name": "File Downloader",
+			"icon": "https://lh3.googleusercontent.com/IPsoYNMVrq-Eem5u-W66l5axCO3Hc73iyEw_tbtedCkVQDxnuwI-BdimKAeeV88hi7cf_o1sYHgqorA9zt_8tAgT=s60"
+		},
+		
+];
+const chromeStoreListDiv = document.getElementById("chrome-store-list");
+// Render chrome extensions
+chromeExtensions.forEach(item => {
+  const itemCard = document.createElement("div");
+  itemCard.innerHTML = `
+    <a href="${item.url}" target="_blank">
+    <div class="thumbnail">
+      <img src="${item.icon}" />
+    </div>
+    <div class="title">${item.name}</div>
+    </a>
+  `;
+  chromeStoreListDiv.appendChild(itemCard);
 });

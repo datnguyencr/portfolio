@@ -72,7 +72,7 @@ nav a:hover::after,nav a.active::after {width:100%;}
 .btn:hover {background:#321979;}
 
 .center-text {text-align:center;}
-section {padding:2rem;max-width:1100px;margin:auto;scroll-margin-top:80px;}
+section {padding:2rem;max-width:1200px;margin:auto;scroll-margin-top:80px;}
 
 /* Skills */
 #skills .skill-list {display:flex;flex-wrap:wrap;gap:10px;margin-top: 10px;}
@@ -81,11 +81,13 @@ section {padding:2rem;max-width:1100px;margin:auto;scroll-margin-top:80px;}
 /* Projects */
 .projects-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;}
 .project-card {
-  padding:10px;border-radius:5px;text-align:center;
+  padding:5px;
+  border-radius:5px;
+  text-align:center;
   border:1px solid #888;transition:.2s;
 }
 .project-card:hover {background:#2d2d2e;}
-.project-card img {max-width:80px;}
+.project-card img {max-width:130px;}
 .project-card span {font-size:1rem;}
 .project-card a {color:#007bff;font-weight:600;font-size:.85rem;}
 
@@ -93,23 +95,52 @@ section {padding:2rem;max-width:1100px;margin:auto;scroll-margin-top:80px;}
 #contact {text-align:center;min-height:80vh;padding-bottom:4rem;}
 footer {text-align:center;padding:1rem;background:#222;color:#ccc;}
 
-/* Web List */
-#web-list {
-  max-width: 600px;
+/*  Extension List */
+.thumbnail-list {
+  display:grid;
   text-align: left;
+  grid-template-columns:repeat(auto-fit,minmax(250px,265px));
+  gap:15px;
 }
 
-#web-list ul { list-style-type: disc; 
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  background-color: #ccc;
+  width: 250px;
+  height: 160px;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.thumbnail ul { list-style-type: disc; 
   padding: 0;
 }
 
-#web-list li {
+.thumbnail li {
   margin: 10px 0;
 }
 
-#web-list a {
+.thumbnail a {
   display: inline-block;
   color: #007bff;  
   font-size: 18px;
   transition: color 0.2s ease;
 }
+
+.title {
+  margin-top: 8px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  display: block;
+  color: #007bff;
+}
+/*   */
