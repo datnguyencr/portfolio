@@ -182,21 +182,21 @@ const webs = [
 		{
 			"url": "https://datnguyencr.gitlab.io/rain-simulator-web/",
 			"name": "Rain Simulator",
-			"icon": ""
+			"icon": "https://play-lh.googleusercontent.com/Lp9k7Yn2m_GXYynt190kdb1EWROLW7RxTc_6RkQRuUy7q47EJQ4CVhxxiC6St3_4ww=w240-h480-rw"
 		},
 		{
 			"url": "https://datnguyencr.gitlab.io/planet-explorer-web/",
 			"name": "Planet Explorer",
-			"icon": ""
+			"icon": "https://play-lh.googleusercontent.com/XwFoaOx9FWPas40y_8evlmaUNgZDb0srg95Iu-Wp9mx5_8OV9Akr1KupXh-qcVyiYCRu=s256-rw"
 		}	
 		,{
 			"url": "https://datnguyencr.gitlab.io/sudoku-web/",
 			"name": "Sudoku",
-			"icon": ""
+			"icon": "https://play-lh.googleusercontent.com/du7PxHCXKkqCg-IFqxbkQeK3t6JgZwDSTo_nQQX4oXY2-7yBixCvDy4dBa__wh64JA=w240-h480-rw"
 		}	,{
 			"url": "https://datnguyencr.gitlab.io/sliding-puzzle-web/",
 			"name": "Sliding Puzzle",
-			"icon": ""
+			"icon": "https://play-lh.googleusercontent.com/prKynU4Ntp8O8-_32XSDZwDV0fbKRPGiStwDBcxI-PDVpwBKaDMPte1r1Y9KA5tvHg=w240-h480-rw"
 		}
 ];
 const webListDiv = document.getElementById("webs-list");
@@ -219,8 +219,14 @@ const chromeExtensions = [
 		{
 			"url": "https://chromewebstore.google.com/detail/file-downloader/hahkepphjffjcghlgfbeedkpmcncllag",
 			"name": "File Downloader",
-			"icon": "https://lh3.googleusercontent.com/IPsoYNMVrq-Eem5u-W66l5axCO3Hc73iyEw_tbtedCkVQDxnuwI-BdimKAeeV88hi7cf_o1sYHgqorA9zt_8tAgT=s60"
+			"icon": "https://lh3.googleusercontent.com/nvIu_TK6SyE0WMSbYckaDQ3TvZ1PSlauYy0FiNpVfCm8ESVtnaJP1kXBdK6NWUBj9MJjnchvq-i2AvTjZmfBNL6EUZs=s1280-w1280-h800"
 		},
+		{
+			"url": "https://chromewebstore.google.com/detail/color-picker-cursor/eacccbllbdkdhieahoijpbnkkdnhllnl",
+			"name": "Color Picker Cursor",
+			"icon": "https://lh3.googleusercontent.com/qZndIQ9rIyVRmU_kJfHTo1vvsLrWykypU_wNml5RJIUl733yK2ZnH3u3roQBKprsWA8anFA3GKPbb5zsaRzbijLx00s=s1280-w1280-h800"
+		},
+		
 		
 ];
 const chromeStoreListDiv = document.getElementById("chrome-store-list");
