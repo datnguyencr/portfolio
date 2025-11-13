@@ -197,6 +197,10 @@ const webs = [
 			"url": "https://datnguyencr.gitlab.io/sliding-puzzle-web/",
 			"name": "Sliding Puzzle",
 			"icon": "https://play-lh.googleusercontent.com/prKynU4Ntp8O8-_32XSDZwDV0fbKRPGiStwDBcxI-PDVpwBKaDMPte1r1Y9KA5tvHg=w240-h480-rw"
+		},{
+			"url": "https://datnguyencr.gitlab.io/cv-builder-web/",
+			"name": "CV Builder",
+			"icon": "https://play-lh.googleusercontent.com/9Lwfn5WWsqlqXCVKO8aIEMCjlo9YaqI-xtCXdAXaaFsToofS6zbJgUecUDJ0W1mNcFXT=s256-rw"
 		}
 ];
 const webListDiv = document.getElementById("webs-list");
@@ -226,8 +230,11 @@ const chromeExtensions = [
 			"name": "Color Picker Cursor",
 			"icon": "https://lh3.googleusercontent.com/qZndIQ9rIyVRmU_kJfHTo1vvsLrWykypU_wNml5RJIUl733yK2ZnH3u3roQBKprsWA8anFA3GKPbb5zsaRzbijLx00s=s1280-w1280-h800"
 		},
-		
-		
+				{
+			"url": "https://chromewebstore.google.com/detail/web-font-override/bfklnnbknkgcalgnejncmfkkfohgadhj",
+			"name": "Web Font Override",
+			"icon": "https://lh3.googleusercontent.com/3JWAlIbjN3ZxOTKvI0fagpuMDn8kO0kvtpE-QsF4kGY3cSfk62rVri5l37xKlw0mASbvNf5CnoYpgzQ7HFerEDIxnA=s1280-w1280-h800"
+		}	
 ];
 const chromeStoreListDiv = document.getElementById("chrome-store-list");
 // Render chrome extensions
