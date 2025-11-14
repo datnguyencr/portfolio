@@ -250,3 +250,8 @@ chromeExtensions.forEach(item => {
   `;
   chromeStoreListDiv.appendChild(itemCard);
 });
+
+const startYear = 2012;
+const currentYear = new Date().getFullYear();
+const experience = currentYear - startYear;
+document.getElementById('experience-years').textContent = experience;
