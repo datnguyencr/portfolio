@@ -16,7 +16,9 @@ jobs:
       - name: Prepare public folder
         run: |
           mkdir -p public
-          cp -r * public
+          # Copy index.html and assets only
+          cp index.html public/
+          cp -r assets public/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
