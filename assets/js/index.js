@@ -14,65 +14,74 @@ function revealOnScroll() {
 	}
 }
 
+async function loadList({ jsonUrl, containerId, countId, renderItem }) {
+  const response = await fetch(jsonUrl);
+  const items = await response.json();
+
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const fragment = document.createDocumentFragment();
+
+  for (const item of items) {
+    const card = document.createElement("div");
+    card.className = "project-card";
+    card.innerHTML = renderItem(item);
+    fragment.appendChild(card);
+  }
+
+  container.appendChild(fragment);
+
+  const countElement = document.getElementById(countId);
+  if (countElement) countElement.textContent = items.length;
+}
+
 
 async function loadApps() {
-
-	const response = await fetch('assets/data/apps.json');
-	const apps = await response.json();
-
-	const appListDiv = document.getElementById("app-list");
-
-	apps.forEach(item => {
-		const itemCard = document.createElement("div");
-		itemCard.className = "project-card";
-
-		itemCard.innerHTML = `
-    <a href="https://play.google.com/store/apps/details?id=${item.id}" target="_blank">
-      <div><img src="${item.icon}" alt="${item.name}"></div>
+loadList({
+  jsonUrl: 'assets/data/apps.json',
+  containerId: 'app-list',
+  countId: 'mobile-count',
+  renderItem: item => `
+    <a href="https://play.google.com/store/apps/details?id=${item.id}" target="_blank" rel="noopener">
+      <div><img src="${item.icon}" loading="lazy" alt="${item.name}"></div>
       <div><span class="bebas-neue-regular">${item.name}</span></div>
     </a>
-  `;
-
-		appListDiv.appendChild(itemCard);
-	});
+  `
+});
 }
+
 
 async function loadWebs() {
-	const response = await fetch('assets/data/webs.json');
-	const webs = await response.json();
-	const webListDiv = document.getElementById("webs-list");
-	webs.forEach(item => {
-		const itemCard = document.createElement("div");
-		itemCard.innerHTML = `
-    <a href="${item.url}" target="_blank">
-    <div class="thumbnail">
-      <img src="${item.icon}" />
-    </div>
-    <div class="title">${item.name}</div>
+loadList({
+  jsonUrl: 'assets/data/webs.json',
+  containerId: 'webs-list',
+  countId: 'web-count',
+  renderItem: item => `
+    <a href="${item.url}" target="_blank" rel="noopener">
+      <div class="thumbnail"><img src="${item.icon}" loading="lazy" alt="${item.name}"></div>
+      <div class="title">${item.name}</div>
     </a>
-  `;
-		webListDiv.appendChild(itemCard);
-	});
+  `
+});
 }
+
 
 async function loadChromeExtensions() {
-
-	const response = await fetch('assets/data/chrome_extensions.json');
-	const chromeExtensions = await response.json();
-	const chromeStoreListDiv = document.getElementById("chrome-store-list");
-	chromeExtensions.forEach(item => {
-		const itemCard = document.createElement("div");
-		itemCard.innerHTML = `
-    <a href="${item.url}" target="_blank">
-    <div class="thumbnail">
-      <img src="${item.icon}" />
-    </div>
-    <div class="title">${item.name}</div>
+loadList({
+  jsonUrl: 'assets/data/chrome_extensions.json',
+  containerId: 'chrome-store-list',
+  countId: 'chrome-count',
+  renderItem: item => `
+    <a href="${item.url}" target="_blank" rel="noopener">
+      <div class="thumbnail"><img src="${item.icon}" loading="lazy" alt="${item.name}"></div>
+      <div class="title">${item.name}</div>
     </a>
-  `;
-		chromeStoreListDiv.appendChild(itemCard);
-	});
+  `
+});
+
 }
+
 
 async function calculateYearOfExperience() {
 	const startYear = 2012;
@@ -85,32 +94,33 @@ loadApps();
 loadWebs();
 loadChromeExtensions();
 calculateYearOfExperience();
-window.addEventListener('scroll', revealOnScroll);
+function setupReveal() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+        });
+    }, { threshold: 0.1 });
 
-document.addEventListener("scroll", () => {
-	const scrollY = window.scrollY;
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+}
+setupReveal();
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
-	const hero = document.getElementById("hero");
-	const img = hero.querySelector(".profile-img");
+window.addEventListener("scroll", () => {
+	const img = document.querySelector(".profile-img");
+    const limit = 250; // px before max shrink
+    const factor = Math.min(window.scrollY / limit, 1);
+    img.style.transform = `scale(${1 - factor * 0.25})`;
+    let position = window.scrollY + 200;
 
-	let heroHeight = hero.offsetHeight;
-	let progress = Math.min(scrollY / heroHeight, 1);
-	let scale = 1 - progress * 0.4;
-	img.style.transform = `scale(${scale})`;
-
-	const sections = document.querySelectorAll("section");
-	const navLinks = document.querySelectorAll("nav a");
-
-	sections.forEach((sec) => {
-		const rect = sec.getBoundingClientRect();
-		if (rect.top <= 150 && rect.bottom >= 150) {
-			let id = sec.getAttribute("id");
-			navLinks.forEach((link) => {
-				link.classList.remove("active");
-				if (link.getAttribute("href") === `#${id}`) {
-					link.classList.add("active");
-				}
-			});
-		}
-	});
+    sections.forEach(sec => {
+        if (position >= sec.offsetTop && position < sec.offsetTop + sec.offsetHeight) {
+            let id = sec.getAttribute("id");
+            navLinks.forEach(a => {
+                a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+            });
+        }
+    });
 });
+
