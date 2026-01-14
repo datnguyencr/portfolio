@@ -161,6 +161,8 @@ nav a.active::after {
   border-radius: 50%;
   border: 4px solid #fff;
   margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  display: block;
   transition: 0.2s ease-out;
   will-change: transform;
 }
@@ -316,3 +318,12 @@ footer {
   display: block;
   color: var(--secondary-color);
 }
+/* Tailwind */
+@import "tailwindcss";
+
+/* Sources */
+@source "../**/*.html";
+@source "../**/*.js";
+
+/* Variants */
+@custom-variant dark (&:where(.dark, .dark *));
