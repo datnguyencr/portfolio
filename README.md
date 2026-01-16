@@ -2,6 +2,7 @@
 
 Welcome to my personal portfolio website.  
 This site showcases my skills, projects, and contact information.
+
 ---
 
 ## 🚀 Site
@@ -9,3 +10,5 @@ This site showcases my skills, projects, and contact information.
 [View the live site](https://datnguyencr.github.io/portfolio/)
 
 ---
+
+[data from here](https://github.com/datnguyencr/datnguyencr)
