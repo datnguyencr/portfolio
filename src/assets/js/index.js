@@ -1,3 +1,4 @@
+import * as Utils from "./utils.js";
 var basePath =
   "https://raw.githubusercontent.com/datnguyencr/datnguyencr/main/data/";
 function revealOnScroll() {
@@ -126,3 +127,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+if (Utils.isProduction()) {
+  Utils.enableContentProtection();
+}

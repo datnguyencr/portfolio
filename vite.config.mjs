@@ -9,7 +9,12 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     viteStaticCopy({
-      targets: [],
+      targets: [
+        {
+          src: "templates/**/*.html",
+          dest: "templates",
+        },
+      ],
     }),
   ],
   build: {
