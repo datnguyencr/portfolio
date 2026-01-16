@@ -109,7 +109,7 @@ window.addEventListener("scroll", () => {
   const img = document.querySelector(".profile-img");
   const limit = 250; // px before max shrink
   const factor = Math.min(window.scrollY / limit, 1);
-  img.style.transform = `scale(${1 - factor * 0.25})`;
+  // img.style.transform = `scale(${1 - factor * 0.25})`;
   let position = window.scrollY + 200;
 
   sections.forEach((sec) => {
