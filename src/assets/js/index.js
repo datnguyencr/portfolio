@@ -1,3 +1,5 @@
+var basePath =
+  "https://raw.githubusercontent.com/datnguyencr/datnguyencr/main/data/";
 function revealOnScroll() {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -38,7 +40,7 @@ async function loadList({ jsonUrl, containerId, countId, renderItem }) {
 
 async function loadApps() {
   loadList({
-    jsonUrl: "assets/data/apps.json",
+    jsonUrl: `${basePath}apps.json`,
     containerId: "app-list",
     countId: "mobile-count",
     renderItem: (item) => `
@@ -52,7 +54,7 @@ async function loadApps() {
 
 async function loadWebs() {
   loadList({
-    jsonUrl: "assets/data/webs.json",
+    jsonUrl: `${basePath}webs.json`,
     containerId: "webs-list",
     countId: "web-count",
     renderItem: (item) => `
@@ -66,7 +68,7 @@ async function loadWebs() {
 
 async function loadChromeExtensions() {
   loadList({
-    jsonUrl: "assets/data/chrome_extensions.json",
+    jsonUrl: `${basePath}chrome_extensions.json`,
     containerId: "chrome-store-list",
     countId: "chrome-count",
     renderItem: (item) => `
