@@ -301,22 +301,19 @@ section {
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 12px;
 }
 
 .thumbnail-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 12px;
 }
 
 /* Project Cards (Mobile & Webs) */
 .project-card,
 .thumbnail {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 4px;
   text-align: center;
@@ -331,31 +328,28 @@ section {
 
 .thumbnail {
   height: auto;
-  min-height: 100px;
-  min-width: 100px;
+  min-height: 80px;
+  min-width: 80px;
   width: auto;
 }
 
 .project-card:hover,
 .thumbnail:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--secondary-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 .project-card img,
 .thumbnail img {
   max-width: 100%;
   object-fit: contain;  border-radius: 12px;
-  margin-bottom: 1rem;
+  border: solid .3px #a1a1a1;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
   transition: transform 0.3s;
 }
 
 .project-card:hover img,
 .thumbnail:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-card span,
